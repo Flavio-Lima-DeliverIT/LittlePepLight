@@ -2,18 +2,17 @@
 {
     public class Profissional
     {
-        int Id_Paciente { get; set; }
-        string Nome { get; set; }
-        string Doc { get; set; }
-        int Id_Convenio { get; set; }
-        string Logradouro { get; set; }
-        int Numero;
-        string Complemento { get; set; }
-        int Cep { get; set; }
-        string Bairro { get; set; }
-        string Estado { get; set; }
-        string Municipio { get; set; }
-        string Login { get; set; }
-        string senha { get; set; }
+       
+        public int ID_FUNCIONARIO { get; set; }
+        public string NOME { get; set; }
+        public string TIPO_DOC { get; set; }
+        public string DOC  { get; set; }
+        public int TP_PROFISSIONAL { get; set; }
+        public string FUNCAO { get; set; }
+        public string ESPECIALIZACAO { get; set; }
+        public int MATRICULA { get; set; }
+        public string LOGIN { get; set; }
+        public string SENHA { get; set; }
+
     }
 }

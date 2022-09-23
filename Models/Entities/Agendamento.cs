@@ -2,8 +2,16 @@
 {
     public class Agendamento
     {
-        public DateTime Data { get; set; }
-        public int Id_Paciente { get; set; }
-        public int Id_Funcionario { get; set; }
-        public int Id_Convenio { get; set; }
+        
+        public int ID_AGENDAMENTO {get; set;}
+
+        public DateTime DATA {get; set;}
+
+        public int ID_PACIENTE {get; set;}
+
+        public int ID_FUNCIONARIO {get; set;}
+
+        public int ID_CONVENIO { get; set; }
+
     }
+}
