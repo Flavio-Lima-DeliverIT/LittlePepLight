@@ -5,11 +5,23 @@ namespace LittlePepLight.Models.Services
 {
     public class PacienteService
     {
-        
-        public List<Paciente> Listar() 
+
+        public List<Paciente> Listar()
         {
-           var repositorio = new PacienteRepository();
-           return repositorio.Listar();
+            var repository = new PacienteRepository();
+            return repository.Listar();
+        }
+
+        public Paciente BucarPaciente(int id)
+        {
+            var repository = new PacienteRepository();
+            return repository.BuscarPaciente(id);
+        }
+
+        public void Deletar(int id)
+        {
+            var repository = new PacienteRepository();
+            repository.Deletar(id);
         }
     }
-}
+} 

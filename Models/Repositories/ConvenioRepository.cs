@@ -20,5 +20,17 @@ namespace LittlePepLight.Models.Repositories
             var convenios = _conn.Query<Convenio>("SELECT * FROM Dev.convenios").ToList();
             return convenios;
         }
+
+        public Convenio BuscarConvenio(int id)
+        {
+            var convenios = _conn.Query<Convenio>("SELECT * FROM Dev.convenios WHERE ID_CONVENIO = '" + id + "'").FirstOrDefault();
+            return convenios;
+        }
+
+        public void Deletar(int id)
+        {
+            _conn.Query<Convenio>("DELETE FROM Dev.convenios WHERE ID_CONVENIO = '" + id + "'");
+            
+        }
     }
 }

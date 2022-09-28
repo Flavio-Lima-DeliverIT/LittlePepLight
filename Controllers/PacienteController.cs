@@ -19,5 +19,22 @@ namespace LittlePepLight.Controllers
             var pacientes = services.Listar();
             return new JsonResult(pacientes);
         }
+
+        [HttpGet("{id}")]
+        public JsonResult BuscarPaciente(int id)
+        {
+
+            var services = new PacienteService();
+            var pacientes = services.BucarPaciente(id);
+            return new JsonResult(pacientes);
+        }
+
+        [HttpDelete("{id}")]
+        public JsonResult Deletar(int id)
+        {
+            var services = new PacienteService();
+            services.Deletar(id);
+            return Json(services);
+        }
     }
 }

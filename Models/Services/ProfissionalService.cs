@@ -7,8 +7,20 @@ namespace LittlePepLight.Models.Services
     {
         public List<Profissional> Listar()
         {
-            var repositorio = new ProfissionalRepository();
-            return repositorio.Listar();
+            var repository = new ProfissionalRepository();
+            return repository.Listar();
+        }
+
+        public Profissional BuscarProfissional(int id)
+        {
+            var repository = new ProfissionalRepository();
+            return repository.BuscarProfissional(id);
+        }
+
+        public void Deletar(int id)
+        {
+            var repository = new ProfissionalRepository();
+            repository.Deletar(id);
         }
     }
 }

@@ -7,8 +7,20 @@ namespace LittlePepLight.Models.Services
     {
         public List<Convenio> Listar()
         {
-            var repositorio = new ConvenioRepository();
-            return repositorio.Listar();
+            var repository = new ConvenioRepository();
+            return repository.Listar();
+        }
+
+        public Convenio BuscarConvenio(int id)
+        {
+            var repository = new ConvenioRepository();
+            return repository.BuscarConvenio(id);
+        }
+
+        public void Deletar(int id)
+        {
+            var repository = new ConvenioRepository();
+            repository.Deletar(id);
         }
     }
 }

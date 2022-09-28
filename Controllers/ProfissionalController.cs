@@ -14,5 +14,21 @@ namespace LittlePepLight.Controllers
             var profissionais = services.Listar();
             return new JsonResult(profissionais);
         }
+
+        [HttpGet("{id}")]
+        public JsonResult BuscarProfissional(int id)
+        {
+            var services = new ProfissionalService();
+            var profissionais = services.BuscarProfissional(id);
+            return new JsonResult(profissionais);
+        }
+
+        [HttpDelete("{id}")]
+        public JsonResult Deletar(int id)
+        {
+            var services = new ProfissionalService();
+            services.Deletar(id);
+            return new JsonResult("");
+        }
     }
 }
